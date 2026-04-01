@@ -20,12 +20,20 @@ class ShoeTile extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           // tenis foto
-          ClipRRect(
-            borderRadius: BorderRadius.circular(12),
-            child: Image.asset(shoe.imagePaht),
+          Expanded(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: Image.asset(
+                shoe.imagePaht,
+                fit: BoxFit.cover,
+              ),
+            ),
           ),
           //descricao
-          Text(shoe.descricao, style: TextStyle(color: Colors.grey[700])),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25.0),
+            child: Text(shoe.descricao, style: TextStyle(color: Colors.grey[700])),
+          ),
 
           //preco + detalhes
           Row(
