@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:loja_tennis/model/cart.dart';
 import 'package:loja_tennis/pages/intro_page.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => Cart(),
+      child: const MyApp(),
+    ),
+  );
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 

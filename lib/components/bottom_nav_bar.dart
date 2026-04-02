@@ -13,7 +13,7 @@ class MyBottomNav extends StatelessWidget {
         color: Colors.grey[400],
         activeColor: Colors.grey.shade700,
         tabActiveBorder: Border.all(color: Colors.white),
-        onTabChange: (value)=> onTabChange,
+        onTabChange: (value) => onTabChange!(value),
 
         tabs: const [
           GButton(icon: Icons.home, text: 'Shop'),
